@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AppWolox';
+
+  constructor(private readonly translateService: TranslateService){
+    this.initializeApp();
+
+  }
+
+  initializeApp() {
+    this.translateService.setDefaultLang('en');
+    this.translateService.use('es');
+  }
 }
