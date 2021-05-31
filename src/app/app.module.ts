@@ -15,12 +15,16 @@ import { PersistenceModule } from 'angular-persistence';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TechnologiesComponent } from './technologies/technologies.component';
+import { PipePipe } from './pipes/pipe.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent
+    RegisterComponent,
+    TechnologiesComponent,
+    PipePipe
   ],
   imports: [
     CommonModule,

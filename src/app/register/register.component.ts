@@ -184,7 +184,7 @@ export class RegisterComponent implements OnInit {
       'Creado'
     );
     this.registerForm.reset();
-    this.router.navigate(['/lists']);
+    this.router.navigate(['/technologies']);
   }
 
 
