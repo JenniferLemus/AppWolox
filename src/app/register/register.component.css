@@ -1,0 +1,84 @@
+.site-wrapper {
+    border-top: 4px solid #ff0037;
+    
+}
+.container {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .item {
+    border-radius: .2em;
+    padding: 2em 1em;
+    color: white;
+    align-self: center;
+    height: 30px;
+    width: 50px;
+  }
+  .item-1 {
+    color: black;
+    flex-grow: 4;
+}
+h1 {
+  font-size: 60pt;
+  font-family: 'Luckiest Guy';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.item-2 {
+    color: black;
+    flex-grow: 4;
+}
+  input[type=text],[type=email] {
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  
+  
+  a:link, a:visited, a:active {
+    text-decoration:none;
+    color: black;
+}
+.item-button-1 {
+    color: black;
+    
+}
+.button-cancel {
+    background-color: transparent; 
+    color: black; 
+    border-radius: 10px 10px 10px ;
+    border: 1px solid gray;
+    width: 100px;
+    height: 35px;
+  }
+  .button-save {
+    background-color: transparent; 
+    color: #8DB600; 
+    border-radius: 10px 10px 10px ;
+    border: 1px solid #8DB600;
+    width: 100px;
+    height: 35px;
+  }
+  .button-save:hover {
+    background-color: #8DB600;
+    color: white;
+  }
+  .button-cancel:hover {
+    background-color: gray;
+    color: white;
+  }
+
+
+
+.container-button {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}

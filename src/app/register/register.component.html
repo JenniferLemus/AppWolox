@@ -1,0 +1,146 @@
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="pacman">
+    <p style="font-size: 20px; color: rgb(0, 0, 0)">Cargando...</p>
+</ngx-spinner>
+<div class="site-wrapper">
+    <div class="container">
+       <h2>Registro</h2>
+    </div>
+    <form [formGroup]="registerForm">
+        <div class="container">
+            <div class="item  item-1">
+                <label for="name">{{'register.label.generics.name' | translate}}</label>
+                <input name="name" formControlName="name" id="name" type="text" placeholder="Ingrese Nombre"
+                    [class.is-invalid]="submit && genericControl.name.errors">
+                <div *ngIf="submit && genericControl.name.errors" class="invalid-feedback">
+                    <div *ngIf="genericControl.name.errors?.required">{{'register.label.generics.required' |
+                        translate}}
+                    </div>
+                    <div *ngIf="genericControl.name.errors?.maxlength">{{'register.label.generics.maxlength30' | translate}}
+                    </div>
+                </div>
+            </div>
+            <div class="item  item-2">
+                <label for="surname">{{'register.label.generics.surname' | translate}}</label>
+                <input name="surname" formControlName="surname" id="surname" type="text"
+                    placeholder="Ingrese Apellido" [class.is-invalid]="submit && genericControl.surname.errors">
+                <div *ngIf="submit && genericControl.surname.errors" class="invalid-feedback">
+                    <div *ngIf="genericControl.surname.errors?.required">{{'register.label.generics.required' |
+                        translate}}</div>
+                    <div *ngIf="genericControl.surname.errors?.maxlength">{{'register.label.generics.maxlength30' | translate}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="item  item-1">
+                <label for="country">{{'register.label.generics.country' | translate}}</label>
+                <ng-select id="country" name="country" formControlName="country" (change)="getDepartments($event)"
+                    [items]="listPaises" [loading]="listPaises == undefined" bindValue="idPadre" bindLabel="nombrePais"
+                    [class.is-invalid]="submit && genericControl.country.errors" [placeholder]="'Seleccione país'">
+                </ng-select>
+                <div *ngIf="submit && genericControl.country.errors" class="invalid-feedback">
+                    <div *ngIf="genericControl.country.errors?.required">{{'register.label.generics.required' |
+                        translate}}
+                    </div>
+                </div>
+            </div>
+            <div class="item  item-2">
+                <label for="department">{{'register.label.generics.department' | translate}}</label>
+                <ng-select id="department" name="department" formControlName="department"
+                    [items]="listDepartamentos" [loading]="listDepartamentos == undefined" bindValue="idPadre"
+                    bindLabel="nombreDepartamento" [placeholder]="'Seleccione departamento'"
+                    [ngClass]="{'is-invalid': submit && genericControl.department.errors}">
+                </ng-select>
+                <div *ngIf="submit && genericControl.department.errors" class="invalid-feedback">
+                    <div *ngIf="genericControl.department.errors?.required">{{'register.label.generics.required' |
+                        translate}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="item  item-1">
+                <label for="email">{{'register.label.generics.email' | translate}}</label>
+                <input name="email" formControlName="email" id="email" type="email" placeholder="Ingrese Email"
+                    [class.is-invalid]="submit && genericControl.email.errors">
+                <div *ngIf="submit && genericControl.email.errors" class="invalid-feedback">
+                    <div *ngIf="genericControl.email.errors?.required">{{'register.label.generics.required' |
+                        translate}}
+                    </div>
+                    <div *ngIf="genericControl.email.errors?.email">{{'register.label.generics.InvalidEmail' | translate}}
+                    </div>
+                </div>
+            </div>
+            <div class="item  item-2">
+                <label for="phone">{{'register.label.generics.phone' | translate}}</label>
+                <input name="phone" formControlName="phone" id="phone" type="text"
+                    placeholder="Ingrese Telefono" [class.is-invalid]="submit && genericControl.phone.errors">
+                <div *ngIf="submit && genericControl.phone.errors" class="invalid-feedback">
+                    <div *ngIf="genericControl.phone.errors?.required">{{'register.label.generics.required' |
+                        translate}}</div>
+                    <div *ngIf="genericControl.phone.errors?.pattern">{{'register.label.generics.campoNumerico' |
+                        translate}}
+                    </div>
+                    <div *ngIf="genericControl.phone.errors?.maxlength">{{'register.label.generics.maxlength10' | translate}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="item  item-1">
+                <label for="password">{{'register.label.generics.password' | translate}}</label>
+                <input name="password" formControlName="password" id="password" type="text"
+                    placeholder="Ingrese Contraseña" (change)="validatePassword($event)"
+                    [class.is-invalid]="submit && genericControl.password.errors">
+                <div *ngIf="submit && genericControl.password.errors" class="invalid-feedback">
+                    <div *ngIf="genericControl.password.errors?.required">{{'register.label.generics.required' |
+                        translate}}</div>
+                    <div *ngIf="genericControl.password.errors?.pattern">{{'register.label.generics.alphanumeric' |
+                        translate}}</div>
+                    <div *ngIf="genericControl.password.errors?.minlength">{{'register.label.generics.minlengthSix' |
+                        translate}}
+                    </div>
+                </div>
+            </div>
+            <div class="item  item-2">
+                <label for="verifyPassword">{{'register.label.generics.verifyPassword' | translate}}</label>
+                <input name="verifyPassword" formControlName="verifyPassword" id="verifyPassword" type="text"
+                    placeholder="Ingrese Contraseña" (change)="validatePassword($event)"
+                    [class.is-invalid]="submit && genericControl.verifyPassword.errors">
+                <div *ngIf="submit && genericControl.verifyPassword.errors" class="invalid-feedback">
+                    <div *ngIf="genericControl.verifyPassword.errors?.required">{{'register.label.generics.required'
+                        |
+                        translate}}</div>
+                    <div *ngIf="genericControl.verifyPassword.errors?.pattern">{{'register.label.generics.alphanumeric' |
+                        translate}}</div>
+                    <div *ngIf="genericControl.verifyPassword.errors?.minlength">{{'register.label.generics.minlengthSix' |
+                        translate}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="item  item-1">
+                <label class="container">
+                    <a [href]="this.ulrTerminos" target="_blank">
+                        <strong>{{'register.label.generics.terms' | translate}}</strong>
+                    </a>
+                    <input type="checkbox" name="terms" formControlName="terms" (click)="validateTerms($event)">
+                </label>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="item-button-2">
+                <button class="button-cancel button-cancel" (click)="clean()"
+                    type="button"><strong>{{'register.label.generics.cancel' |
+                        translate}}</strong></button>
+            </div>
+            <div class="item-button-1">
+                <button class="button-save" (click)="saveInformation()" type="button"
+                    id="save"><strong>{{'register.label.generics.save' |
+                        translate}}</strong>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

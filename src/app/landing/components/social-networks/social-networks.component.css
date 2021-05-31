@@ -17,6 +17,7 @@
     background-size: auto;
     flex-grow: 4;
     margin-top: 20px;
+    height: 350px;
 }
 .item-2 {
   color: black;
@@ -25,6 +26,11 @@
   flex-shrink: 3;
   flex-grow: 5;
   margin-top: 20px;
+  font-size: 21px;
+}
+
+.item-text{
+  margin-top: 102px;
 }
 .button {
   background-color: transparent; 
@@ -93,4 +99,10 @@
 }
 .fa-color {
   color: #2E9AFE;
+}
+
+.followers{
+  text-align: center;
+  font-size: 50px;
+  margin-top: 110px;
 }

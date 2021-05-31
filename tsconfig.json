@@ -17,10 +17,16 @@
     "target": "es2017",
     "module": "es2020",
     "strictPropertyInitialization": false,
+    "resolveJsonModule": true,
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "assert": [
+        "./assert.ts"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

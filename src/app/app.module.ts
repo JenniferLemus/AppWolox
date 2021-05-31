@@ -3,9 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './landing/components/footer/footer.component';
-import { BenefitsComponent } from './landing/components/benefits/benefits.component';
-import { SocialNetworksComponent } from './landing/components/social-networks/social-networks.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -13,11 +10,17 @@ import { LandingDetailModule } from './landing/landing-detail.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { RegisterComponent } from './register/register.component';
+import { PersistenceModule } from 'angular-persistence';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RegisterComponent
   ],
   imports: [
     CommonModule,
@@ -27,6 +30,11 @@ import { NgSelectModule } from '@ng-select/ng-select';
     FlexLayoutModule,
     NgSelectModule,
     HttpClientModule,
+    PersistenceModule,
+    ReactiveFormsModule,
+    NgxSpinnerModule,
+    FormsModule,
+    BrowserAnimationsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

@@ -1,0 +1,126 @@
+{
+    "Paises": [
+        {
+            "nombrePais": "Colombia",
+            "idPadre": 57
+        },
+        {
+            "nombrePais": "Argentina",
+            "idPadre": 54
+        },
+        {
+            "nombrePais": "Chile",
+            "idPadre": 56
+        },
+        {
+            "nombrePais": "Peru",
+            "idPadre": 51
+        },
+        {
+            "nombrePais": "México",
+            "idPadre": 595
+        }
+    ],
+    "Dapartamentos": [
+        {
+            "nombreDepartamento": "Antioquia",
+            "idPadre": 57
+        },
+        {
+            "nombreDepartamento": "Tolima",
+            "idPadre": 57
+        },
+        {
+            "nombreDepartamento": "Huila",
+            "idPadre": 57
+        },
+        {
+            "nombreDepartamento": "Cundinamarca",
+            "idPadre": 57
+        },
+        {
+            "nombreDepartamento": "Bolivar",
+            "idPadre": 57
+        },
+        {
+            "nombreDepartamento": "Buenos Aires",
+            "idPadre": 54
+        },
+        {
+            "nombreDepartamento": "Córdoba",
+            "idPadre": 54
+        },
+        {
+            "nombreDepartamento": "Mendoza",
+            "idPadre": 54
+        },
+        {
+            "nombreDepartamento": "Chaco",
+            "idPadre": 54
+        },
+        {
+            "nombreDepartamento": "Santa Fe",
+            "idPadre": 54
+        },
+        {
+            "nombreDepartamento": "Coquimbo",
+            "idPadre": 56
+        },
+        {
+            "nombreDepartamento": "Aconcagua",
+            "idPadre": 56
+        },
+        {
+            "nombreDepartamento": "Concepción",
+            "idPadre": 56
+        },
+        {
+            "nombreDepartamento": "Maule",
+            "idPadre": 56
+        },
+        {
+            "nombreDepartamento": "Pachucay",
+            "idPadre": 56
+        },
+        {
+            "nombreDepartamento": "Callao",
+            "idPadre": 51
+        },
+        {
+            "nombreDepartamento": "Ayacucho",
+            "idPadre": 51
+        },
+        {
+            "nombreDepartamento": "Cajamarca",
+            "idPadre": 51
+        },
+        {
+            "nombreDepartamento": "Cusco",
+            "idPadre": 51
+        },
+        {
+            "nombreDepartamento": "Lima",
+            "idPadre": 51
+        },
+        {
+            "nombreDepartamento": "Jalisco",
+            "idPadre": 595
+        },
+        {
+            "nombreDepartamento": "Yucatán",
+            "idPadre": 595
+        },
+        {
+            "nombreDepartamento": "Chiapas",
+            "idPadre": 595
+        },
+        {
+            "nombreDepartamento": "Ciudad de México",
+            "idPadre": 595
+        },
+        {
+            "nombreDepartamento": "Michoacán",
+            "idPadre": 595
+        }
+    ]
+}
