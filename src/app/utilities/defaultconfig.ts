@@ -5,7 +5,7 @@ export class DefaultConfig {
     DefaultUrlTerminos:'https://www.wolox.com.ar/policies/Privacy_Policy.pdf',
   };
   static DEFAULT_TEXT_APP = {
-    coincidenciaPassword: 'Las contraseñas NO coinciden',
+    coincidenciaPassword: 'Las contraseñas deben ser iguales',
     guardoCorrectamente: 'Se guardo correctamente.'
   }
 }

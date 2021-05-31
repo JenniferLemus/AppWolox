@@ -21,7 +21,7 @@ export class PersistenceInfoService {
   public Encrypt(word: string, keyWord: string, isNameVar: boolean = false): string {
     let ciphertext: any;
     if (isNameVar) {
-      ciphertext = CryptoJS.MD5(word, keyWord);
+      ciphertext = CryptoJS.MD5(word);
     } else {
       const base64Key = CryptoJS.enc.Base64.parse(keyWord);
       const utf8 = CryptoJS.enc.Utf8.parse(word);
